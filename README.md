@@ -33,8 +33,8 @@ The whole test data are provided during the competition which is the right situa
 After labeling the test data, I retrained the model with the test data(1 epoch) and with the train data(1 epoch). <br />
 
 ## Final ensemble
-For the final ensemble, I added following 4 models. The final score is The score is 0.1342(Public Score) and 0.1316(Private Score).
- 1. further fine-tuning the public model with pseudo labeling
- 2. 1st model
- 3. 1st model with pseudo labeling
- 4. 2nd model
+For the final ensemble, I added following 4 models. The score is 0.1316(Public Score) and 0.1342(Private Score).
+ 1. further fine-tuning the public model with pseudo labeling (0.1386)
+ 2. 1st model (0.1347)
+ 3. 1st model with pseudo labeling (0.1324)
+ 4. 2nd model (0.1360)
