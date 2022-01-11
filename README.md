@@ -5,7 +5,6 @@ Top 6% solution(141/2,605 teams, solo bronze) for [Ventilator Pressure Predictio
 Models are inspired by [the public model of the competition](https://www.kaggle.com/dlaststark/gb-vpp-pulp-fiction). <br />
  1. Using Conv1d Block(2convolutional 1d layers with the proper pooling) to give the model information about adjacent(nearby) features(1st model, increased the score 0.1392 -> 0.1347). <br />
  2. Using simple 3 dense layers(2nd model, increased the score 0.1392 -> 0.1360). <br />
-
 ![plot](./model-best.h5.png "bidirectional LSTM with conv1d layers")
 |:--:| 
 | *bidirectional LSTM with conv1d layers(2nd model)* |
@@ -30,4 +29,10 @@ MEAN OR MEDIAN: 0.1325 <br />
 ## Pseudo labeling
 The whole test data are provided during the competition which is the right situation for trying *pseudo labeling*. For pseudo labeling, the ensembled model(score 0.1325) is used. <br />
 After labeling the test data, I retrained the model with the test data(1 epoch) and with the train data(1 epoch). <br />
-The score is 0.1342(Public Score) and 0.1316(Private Score).
+
+## Final ensemble
+For the final ensemble, I added following 4 models. The final score is The score is 0.1342(Public Score) and 0.1316(Private Score).
+ 1. further fine-tuning the public model with pseudo labeling
+ 2. 1st model
+ 3. 1st model with pseudo labeling
+ 4. 2nd model
