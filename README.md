@@ -2,12 +2,14 @@
 Top 6% solution(141/2,605 teams, solo bronze) for [Ventilator Pressure Prediction Competition](https://www.kaggle.com/c/ventilator-pressure-prediction).
 
 ## Models: bidirectional LSTM with conv1d layers/ bidirectional LSTM with 3-layed NN
-Models are inspired by [the public model of the competition](https://www.kaggle.com/dlaststark/gb-vpp-pulp-fiction). <br />
- 1. Using Conv1d Block(2convolutional 1d layers with the proper pooling) to give the model information about adjacent(nearby) features(1st model, increased the score 0.1392 -> 0.1347). <br />
- 2. Using simple 3 dense layers(2nd model, increased the score 0.1392 -> 0.1360). <br />
 ![plot](./model-best.h5.png "bidirectional LSTM with conv1d layers")
 |:--:| 
 | *bidirectional LSTM with conv1d layers(2nd model)* |
+
+Models are inspired by [the public model of the competition](https://www.kaggle.com/dlaststark/gb-vpp-pulp-fiction). <br />
+ 1. Using Conv1d Block(2convolutional 1d layers with the proper pooling) to give the model information about adjacent(nearby) features(1st model, increased the score 0.1392 -> 0.1347). <br />
+ 2. Using simple 3 dense layers(2nd model, increased the score 0.1392 -> 0.1360). <br />
+
 
 ## Post processing
 This competiton is regression, but the steps of target values are consistent. Therefore I post-processed the predicted value to be one of the target values.
