@@ -23,7 +23,7 @@ def post_process(pressure):
 
 ## Ensemble
 Tried median, lasso(linear regression). The best method(MEAN OR MEDIAN) was from [this discussion](https://www.kaggle.com/c/ventilator-pressure-prediction/discussion/282735). <br />
-Instead of simple compute median or average of the predictions, this method keep *threshold* to decide whether to calculate median or average.  <br />
+Instead of simple compute median or average of the predictions, this method keeps *threshold* to decide whether to calculate median or average.  <br />
 MEDIAN: 0.1327 <br />
 LASSO: 0.1333 <br />
 MEAN OR MEDIAN: 0.1325 <br />
